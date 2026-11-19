@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.liberu.dev/module/v1.json",
+  "name": "shipping-fedex",
+  "display_name": "Shipping FedEx Adapter",
+  "description": "FedEx direct carrier REST API adapter extending liberusoftware/shipping-contracts.",
+  "version": "1.0.0",
+  "category": "adapter",
+  "provider": "Liberu\\Shipping\\FedEx\\FedExShippingServiceProvider",
+  "requires": {
+    "php": "^8.5",
+    "laravel": "^13.0",
+    "packages": {
+      "liberusoftware/shipping-contracts": "^1.0"
+    }
+  },
+  "capabilities": [
+    "shipping.provider.fedex"
+  ],
+  "default_enabled": true,
+  "features": [
+    "FedEx Rate & Transit Times API",
+    "FedEx Ship & Cancel API",
+    "FedEx Track API",
+    "FedEx Address Validation API"
+  ]
+}
